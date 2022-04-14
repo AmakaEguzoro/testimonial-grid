@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.wrapper {
+  max-width: 1400px;
+  padding: 6.5rem;
+  margin-bottom: 1.3rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "purple purple grey white-tall" "purple purple grey white-tall" "white black black white-tall";
+  gap: 20px;
+  height: auto;
+  background-color: var(--light-grayish-blue);
+}
+
+.wrapper .purple,
+.wrapper .black,
+.wrapper .white-small,
+.wrapper .white-tall,
+.wrapper .grey {
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.wrapper .purple img,
+.wrapper .black img,
+.wrapper .white-small img,
+.wrapper .white-tall img,
+.wrapper .grey img {
+  border-radius: 50%;
+}
+
+.wrapper .purple {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: purple;
+  background-color: var(--moderate-violet);
+  color: var(--white);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 122px;
+  background-position-x: 80%;
+}
+
+.wrapper .purple .bottom {
+  padding-right: 2.5rem;
+}
+
+.wrapper .grey {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: grey;
+  background-color: var(--very-dark-grayish-blue);
+  color: var(--white);
+}
+
+.wrapper .grey .bottom {
+  padding-right: 2rem;
+}
+
+.wrapper .black {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: black;
+  background-color: var(--very-dark-blackish-blue);
+  color: var(--white);
+}
+
+.wrapper .black .bottom {
+  padding-right: 2rem;
+}
+
+.wrapper .white-small,
+.wrapper .white-tall {
+  background-color: var(--white);
+  color: var(--very-dark-blackish-blue);
+}
+
+.wrapper .white-small {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: white;
+  padding: 2.8rem;
+}
+
+.wrapper .white-small .middle {
+  color: var(--very-dark-grayish-blue);
+}
+
+.wrapper .white-tall {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  grid-area: white-tall;
+  padding: 1.8rem;
+}
+
+.wrapper .white-tall .middle {
+  color: var(--very-dark-blackish-blue);
+}
+
+@media screen and (max-width: 991px) {
+  .wrapper {
+    -ms-grid-columns: minmax(300px, 1fr);
+        grid-template-columns: minmax(300px, 1fr);
+        grid-template-areas: "purple" "grey" "white" "black" "white-tall";
+  }
+  .wrapper .middle {
+    font-size: 1.2rem;
+  }
+}
+
+.wrapper .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.wrapper .top h2 {
+  font-size: 12px;
+}
+
+.wrapper .top p {
+  color: var(--light-gray);
+}
+
+.wrapper .middle {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.wrapper .bottom {
+  color: #9c9c9c;
+  line-height: 1.5;
+}
+/*# sourceMappingURL=styles.css.map */
